@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>9Values – Simplify Images for Drawing Reference</title>
   <meta name="description" content="9Values helps artists convert photos into simplified grayscale references for sketching and painting. Free, fast, and easy to use." />
 
-  <!-- Open Graph (Social Sharing) -->
-  <meta property="og:title" content="9Values – Simplify Images for Drawing Reference">
-  <meta property="og:description" content="Convert photos into simplified grayscale references for sketching and painting.">
-  <meta property="og:image" content="https://9values.com/IMG_4668.png">
-  <meta property="og:url" content="https://9values.com">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph -->
+  <meta property="og:title" content="9Values – Simplify Images for Drawing Reference" />
+  <meta property="og:description" content="Convert photos into simplified grayscale references for sketching and painting." />
+  <meta property="og:image" content="https://9values.com/IMG_4668.png" />
+  <meta property="og:url" content="https://9values.com" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <style>
     body {
@@ -20,6 +20,7 @@
       font-family: sans-serif;
       background-color: #f4f4f4;
     }
+
     header {
       background-color: #111;
       color: #fff;
@@ -29,76 +30,93 @@
       font-weight: bold;
       letter-spacing: 1px;
     }
-    iframe {
-      border: none;
-      width: 100%;
-      height: calc(100vh - 120px);
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
     }
+
+    .iframe-wrapper {
+      flex: 1 1 600px;
+      min-width: 300px;
+    }
+
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+
+    .reference-images {
+      flex: 0 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .reference-images img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .credit {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+      margin: 10px 0;
+    }
+
     footer {
       text-align: center;
       font-size: 0.8rem;
       color: #777;
       padding: 10px;
     }
-    .comparison-section {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding: 20px;
-      background: #fff;
-    }
-    .comparison-section img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-    }
-    .comparison-caption {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
-    .credit {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #555;
-      margin-top: -10px;
-    }
-    .try-header {
-      text-align: center;
-      font-weight: normal;
-      padding-top: 10px;
-      font-size: 1.2rem;
+
+    @media (max-width: 768px) {
+      .iframe-wrapper iframe {
+        height: 65vh;
+      }
     }
   </style>
 </head>
 <body>
   <header>✏️ 9Values – Simplify Images for Drawing Reference</header>
 
-  <section class="comparison-section">
-    <div>
-      <img src="0670_repro_2.jpg" alt="Original painting - Girl with a Pearl Earring">
-      <p class="comparison-caption">Original – <em>Girl with a Pearl Earring</em></p>
+  <div class="main-content">
+    <div class="iframe-wrapper">
+      <h2 style="font-weight: normal; font-size: 1.2rem; text-align: center;">Try it yourself 👇</h2>
+      <iframe src="https://9values-9values.hf.space" title="9Values Drawing Reference Tool"></iframe>
     </div>
-    <div>
-      <img src="image-4.webp" alt="Simplified version of painting">
-      <p class="comparison-caption">Simplified Output</p>
+
+    <div class="reference-images">
+      <div>
+        <img src="0670_repro_2.jpg" alt="Original painting - Girl with a Pearl Earring" />
+        <p class="caption">Original – <em>Girl with a Pearl Earring</em></p>
+      </div>
+      <div>
+        <img src="image-4.webp" alt="Simplified version of painting" />
+        <p class="caption">Simplified Output</p>
+      </div>
     </div>
-  </section>
+  </div>
+
   <p class="credit">
     Image credit: <strong>Mauritshuis, The Hague</strong>. Used for non-commercial educational demonstration.
   </p>
-
-  <h2 class="try-header">Try it yourself</h2>
-  <iframe src="https://9values-9values.hf.space" title="9Values Drawing Reference Tool"></iframe>
 
   <footer>
     Built for artists. No tracking. Your images stay private.
   </footer>
 </body>
 </html>
-
-
-
 
