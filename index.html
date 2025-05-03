@@ -46,7 +46,7 @@
 
     .iframe-wrapper iframe {
       width: 100%;
-      height: 80vh;
+      height: 95vh;
       border: none;
     }
 
@@ -55,6 +55,8 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      max-height: 95vh;
+      overflow-y: auto;
     }
 
     .reference-images img {
@@ -85,6 +87,11 @@
     @media (max-width: 768px) {
       .iframe-wrapper iframe {
         height: 65vh;
+      }
+
+      .reference-images {
+        max-height: none;
+        overflow: visible;
       }
     }
   </style>
@@ -118,5 +125,3 @@
   </footer>
 </body>
 </html>
-
-
