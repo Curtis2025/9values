@@ -32,7 +32,7 @@
     iframe {
       border: none;
       width: 100%;
-      height: calc(100vh - 120px); /* room for footer */
+      height: calc(100vh - 120px);
     }
     footer {
       text-align: center;
@@ -44,11 +44,28 @@
 </head>
 <body>
   <header>✏️ 9Values – Simplify Images for Drawing Reference</header>
+
+  <section style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 20px; background: #fff;">
+    <div style="flex: 1; max-width: 400px;">
+      <img src="0670_repro_2.jpg" alt="Original painting - Girl with a Pearl Earring" style="width: 100%; height: auto; border: 1px solid #ccc;">
+      <p style="text-align: center; font-size: 0.9rem;">Original – <em>Girl with a Pearl Earring</em></p>
+    </div>
+    <div style="flex: 1; max-width: 400px;">
+      <img src="image-4.webp" alt="Simplified 9Values version of painting" style="width: 100%; height: auto; border: 1px solid #ccc;">
+      <p style="text-align: center; font-size: 0.9rem;">Simplified Output (9Values)</p>
+    </div>
+  </section>
+  <p style="text-align: center; font-size: 0.8rem; color: #555; margin-top: -10px;">
+    Image credit: <strong>Mauritshuis, The Hague</strong>. Used for non-commercial educational demonstration.
+  </p>
+
   <iframe src="https://9values-9values.hf.space" title="9Values Drawing Reference Tool"></iframe>
+
   <footer>
     Built for artists. No tracking. Your images stay private.
   </footer>
 </body>
 </html>
+
 
 
